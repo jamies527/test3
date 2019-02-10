@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="main.css">
+    <link href="//fonts.googleapis.com/css?family=Prompt:900|Saira+Extra+Condensed:900" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    <script>
+    $(document).ready(function(){ 
+        $(".hamburger .fa-times").hide();
+
+        $(".hamburger .fa-bars").click(function(){
+            $(this).hide();
+            $(".hamburger .fa-times").show();
+            $(".mob ul").addClass("nav-logo");
+            $("body").css("overflow","hidden"); //body or header (header to hide content below menu and stll have scrolling or body to disable scroll)
+
+        
+        }); 
+        $(".hamburger .fa-times").click(function(){
+            $(this).hide();
+            $(".hamburger .fa-bars").show();
+            $(".mob ul").removeClass("nav-logo");
+            $("body").css("overflow","visible"); //body or header (see above)
+        });   
+
+        $("li").click(function(){
+          
+            $("body").css("overflow","visible"); //body or header (see above)
+        });   
+
+        $(".hamburger2 .fa-times").hide();
+
+        $(".hamburger2 .fa-bars").click(function(){
+            $(this).hide();
+            $(".hamburger2 .fa-times").show();
+            $(".mob2 ul").addClass("nav-logo");
+            $("body").css("overflow","hidden"); //body or header (header to hide content below menu and stll have scrolling or body to disable scroll)
+
+        
+        }); 
+        $(".hamburger2 .fa-times").click(function(){
+            $(this).hide();
+            $(".hamburger2 .fa-bars").show();
+            $(".mob2 ul").removeClass("nav-logo");
+            $("body").css("overflow","visible"); //body or header (see above)
+        });   
+
+        $(".mob2 a").click(function(){
+            $(".hamburger2 .fa-times").hide();
+            $(".hamburger2 .fa-bars").show();
+            $(".mob2 ul").removeClass("nav-logo");
+            $("body").css("overflow","visible"); //body or header (see above)
+        });   
+    });
+        </script>
+
+   
+
+    <title>JJ</title>
+</head>
+<body>
+
+        <header>
+                <div class="home" id="home">
+                <nav id="nav">
+                
+                        <li id="nav-logo"><a href="#home">theCROWD.</a></li>
+                        <li id="nav-creative"><a href="#CREATIVE">CREATIVE.</a></li>
+                        <li id="nav-digital"><a href="#DIGITAL">DIGITAL MARKETING.</a></li>
+                        <li id="nav-about"><a href="#ABOUT">ABOUT US.</a></li>
+                        <li id="nav-contact"><a href="#CONTACT">CONTACT US.</a></li>
+                        <li id="nav-freereview"><a href="freereview.html"><button class="nav-freereview">FREE REVIEW</button></a></li>
+        
+                </nav>
+
+                <nav class="mob">
+                    <div class="hamburger"> 
+                        <i class="fas fa-bars"></i>
+                        <i class="fas fa-times"></i>
+                        <li class="logo"><a href="#home">theCROWD.</a></li>
+
+                    
+                    </div>
+
+                        <ul>
+                        <li id="nav-creative"><a href="#CREATIVE">CREATIVE.</a></li>
+                        <li id="nav-digital"><a href="#DIGITAL">DIGITAL MARKETING.</a></li>
+                        <li id="nav-about"><a href="#ABOUT">ABOUT US.</a></li>
+                        <li id="nav-contact"><a href="#CONTACT">CONTACT US.</a></li>
+                        <li id="nav-freereview"><a href="freereview.html"><button class="nav-freereview">FREE REVIEW</button></a></li>
+                        </ul>
+                </nav>
+              
+              
+           
+
+            awsedf
+            <br>
+            <br>
+            asdfg
+            <br>
+            asg
+            <br>
+            <br>
+            <br>
+        </div>
+        <body>
+
+        </header>
+
+        <nav id="nav2">
+                <li id="nav-logo"><a href="#home">theCROWD.</a></li>
+                <li id="nav-creative"><a href="#CREATIVE">CREATIVE.</a></li>
+                <li id="nav-digital"><a href="#DIGITAL">DIGITAL MARKETING.</a></li>
+                <li id="nav-about"><a href="#ABOUT">ABOUT US.</a></li>
+                <li id="nav-contact"><a href="#CONTACT">CONTACT US.</a></li>
+                <li id="nav-freereview2"><a href="freereview.html"><button class="nav-freereview2">FREE REVIEW</button></a></li>
+        </nav>
+
+        <nav class="mob2">
+                <div class="hamburger2"> 
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-times"></i>
+                    <li class="logo"><a href="#home">theCROWD.</a></li>
+
+                
+                </div>
+
+                    <ul>
+                    <li id="nav-creative"><a href="#CREATIVE">CREATIVE.</a></li>
+                    <li id="nav-digital"><a href="#DIGITAL">DIGITAL MARKETING.</a></li>
+                    <li id="nav-about"><a href="#ABOUT">ABOUT US.</a></li>
+                    <li id="nav-contact"><a href="#CONTACT">CONTACT US.</a></li>
+                    <li id="nav-freereview"><a href="freereview.html"><button class="nav-freereview">FREE REVIEW</button></a></li>
+                    </ul>
+            </nav>
+    
+        <div id="CREATIVE">
+
+        content
+        </div>
+
+        <div id="DIGITAL">
+            content
+        </div>
+
+        <div id="ABOUT">
+            content
+        </div>
+
+        <div id="CONTACT">
+            content
+        </div>
+    <footer>
+        content
+    </footer>
+</body>
+
+</html>
