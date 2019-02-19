@@ -7,10 +7,13 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="main.css">
     <link href="//fonts.googleapis.com/css?family=Prompt:900|Saira+Extra+Condensed:900" rel="stylesheet">
-    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
     <script>
-    $(document).ready(function(){ 
+
+    
+    
+        $(document).ready(function(){ 
         $(".hamburger .fa-times").hide();
 
         $(".hamburger .fa-bars").click(function(){
@@ -18,7 +21,7 @@
             $(".hamburger .fa-times").show();
             $(".mob ul").addClass("nav-logo");
             $("body").css("overflow","hidden"); //body or header (header to hide content below menu and stll have scrolling or body to disable scroll)
-
+            $('.container').addClass('myClass');
         
         }); 
         $(".hamburger .fa-times").click(function(){
@@ -26,10 +29,24 @@
             $(".hamburger .fa-bars").show();
             $(".mob ul").removeClass("nav-logo");
             $("body").css("overflow","visible"); //body or header (see above)
+            $('.container').removeClass('myClass');
         });   
 
+        $(".mob a").click(function(){
+            $(".hamburger .fa-times").hide();
+            $(".hamburger .fa-bars").show();
+            $(".mob ul").removeClass("nav-logo");
+            $('.container').removeClass('myClass');
+            $("body").css("overflow","visible"); //body or header (see above)
+           
+           
+            // $('.mob2').removeClass('wrapper') TEST THIS. USE FLEXBOX TO ARRANGE MENU WHEN AT THE BOTTOM OF PAGE
+            // $(".mob2").addClass("wrapper");
+            
+        });  
+
         $("li").click(function(){
-          
+            
             $("body").css("overflow","visible"); //body or header (see above)
         });   
 
@@ -40,23 +57,59 @@
             $(".hamburger2 .fa-times").show();
             $(".mob2 ul").addClass("nav-logo");
             $("body").css("overflow","hidden"); //body or header (header to hide content below menu and stll have scrolling or body to disable scroll)
-
+            $('.container2').addClass('myClass');
         
         }); 
         $(".hamburger2 .fa-times").click(function(){
             $(this).hide();
             $(".hamburger2 .fa-bars").show();
             $(".mob2 ul").removeClass("nav-logo");
+            $('.container2').removeClass('myClass');
+
             $("body").css("overflow","visible"); //body or header (see above)
+            
         });   
 
         $(".mob2 a").click(function(){
             $(".hamburger2 .fa-times").hide();
             $(".hamburger2 .fa-bars").show();
             $(".mob2 ul").removeClass("nav-logo");
+            $('.container2').removeClass('myClass');
             $("body").css("overflow","visible"); //body or header (see above)
+           
+           
+            // $('.mob2').removeClass('wrapper') TEST THIS. USE FLEXBOX TO ARRANGE MENU WHEN AT THE BOTTOM OF PAGE
+            // $(".mob2").addClass("wrapper");
+            
+
+            
         });   
     });
+
+    $(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
         </script>
 
    
@@ -65,24 +118,27 @@
 </head>
 <body>
 
-        <header>
-                <div class="home" id="home">
+        <header class="home" id="home">
+               
                 <nav id="nav">
                 
                         <li id="nav-logo"><a href="#home">theCROWD.</a></li>
+                        <ul id="box">
                         <li id="nav-creative"><a href="#CREATIVE">CREATIVE.</a></li>
                         <li id="nav-digital"><a href="#DIGITAL">DIGITAL MARKETING.</a></li>
                         <li id="nav-about"><a href="#ABOUT">ABOUT US.</a></li>
                         <li id="nav-contact"><a href="#CONTACT">CONTACT US.</a></li>
+                        </ul>
                         <li id="nav-freereview"><a href="freereview.html"><button class="nav-freereview">FREE REVIEW</button></a></li>
-        
+                        
                 </nav>
-
+                <div class="container">
                 <nav class="mob">
                     <div class="hamburger"> 
+                        <li class="logo"><a href="#home">theCROWD.</a></li>
                         <i class="fas fa-bars"></i>
                         <i class="fas fa-times"></i>
-                        <li class="logo"><a href="#home">theCROWD.</a></li>
+                        
 
                     
                     </div>
@@ -95,7 +151,7 @@
                         <li id="nav-freereview"><a href="freereview.html"><button class="nav-freereview">FREE REVIEW</button></a></li>
                         </ul>
                 </nav>
-              
+                </div>
               
            
 
@@ -108,25 +164,39 @@
             <br>
             <br>
             <br>
-        </div>
+            awsedf
+            <br>
+            <br>
+            asdfg
+            <br>
+            asg
+            <br>
+            <br>
+            <br>
+    
+    </header>
         <body>
 
-        </header>
+        
 
         <nav id="nav2">
                 <li id="nav-logo"><a href="#home">theCROWD.</a></li>
+                <ul id="box">
                 <li id="nav-creative"><a href="#CREATIVE">CREATIVE.</a></li>
                 <li id="nav-digital"><a href="#DIGITAL">DIGITAL MARKETING.</a></li>
                 <li id="nav-about"><a href="#ABOUT">ABOUT US.</a></li>
                 <li id="nav-contact"><a href="#CONTACT">CONTACT US.</a></li>
+                </ul>
+            
                 <li id="nav-freereview2"><a href="freereview.html"><button class="nav-freereview2">FREE REVIEW</button></a></li>
         </nav>
-
+        <div class="container2">
         <nav class="mob2">
                 <div class="hamburger2"> 
+                    <li class="logo"><a href="#home">theCROWD.</a></li>
                     <i class="fas fa-bars"></i>
                     <i class="fas fa-times"></i>
-                    <li class="logo"><a href="#home">theCROWD.</a></li>
+                    
 
                 
                 </div>
@@ -138,7 +208,8 @@
                     <li id="nav-contact"><a href="#CONTACT">CONTACT US.</a></li>
                     <li id="nav-freereview"><a href="freereview.html"><button class="nav-freereview">FREE REVIEW</button></a></li>
                     </ul>
-            </nav>
+        </nav>
+        </div>
     
         <div id="CREATIVE">
 

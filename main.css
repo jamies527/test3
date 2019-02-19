@@ -7,44 +7,52 @@ header {
 .mob, .mob2 {
     display: none;
 }
-#home > #nav {
+ #nav {
     color: #Fafafa;
 	margin:0;
     text-align: center;
     font-size: 10pt;
-    line-height: 250%;
     text-decoration: none;
     font-family: 'prompt', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 
-#home > .mob {
+   .mob {
     color: #Fafafa;
 	margin:0;
-    padding-bottom: 5vh;
     text-align: center;
     font-size: 10pt;
-    line-height: 250%;
     text-decoration: none;
     font-family: 'prompt', sans-serif;
+    
 
 }
 
     .mob2 {
     color: #FC7147;
 	margin:0;
-    padding-bottom: 5vh;
     text-align: center;
     font-size: 10pt;
-    line-height: 250%;
     text-decoration: none;
     font-family: 'prompt', sans-serif;
+    
 
+   
 }
 
 .mob2 ul {
 
     color: #Fafafa;
+    
+
+}
+
+#box {
+    margin-left: auto;
+    margin-right: auto;
 }
 #nav2{
     background: #Fafafa;
@@ -53,14 +61,17 @@ header {
     padding:0;
     text-align: center;
     font-size: 10pt;
-    line-height: 250%;
+    
     text-decoration: none;
     font-family: 'prompt', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
 }
 #nav li, #nav2 li{
     text-decoration: none;
-    padding:5vh;
+    padding: 3vh;
     display: inline-block;
 }
 
@@ -142,6 +153,10 @@ html{
 }
 
 #CREATIVE {
+    height: 100vh;
+    background-color: #FC7147;
+}
+#CREATIVE {
 height: 100vh;
 background-color: #Fafafa;
 }
@@ -159,7 +174,7 @@ background-color: #Fafafa;
     background-color: #1a1a1a;
     }
 
-footer {
+FOOTER {
     height: 25vh;
     background-color: #FC7147;
 }
@@ -251,7 +266,17 @@ footer {
     }
   }
 
-  @media only screen and (max-width: 880px) {
+  @media only screen and (max-width: 895px) {
+
+    .mob {
+        display: flex;
+    flex-direction: column;
+    }
+
+    .mob2 {
+        display: flex;
+    flex-direction: column;
+    }
     
     
     #nav, #nav2 {
@@ -259,13 +284,14 @@ footer {
 
     }
     .mob, .hamburger {
-        display: block;
+        
         background-color: transparent;
        
     }
     .hamburger{
-        position: relative;
-        padding: 5vh;
+        padding: 3vh;
+        display: flex;
+        flex-direction: initial;
     }
     .mob ul {
     
@@ -279,13 +305,14 @@ footer {
     }
    
     .mob ul.nav-logo {
-        display: block;
-        height: 100vh;
-        position: inline-block;
-        margin-top: 5vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        flex-grow: 1;
+        
     }
     .mob ul li {
-        padding: 5vh;
+        padding: 3vh;
         cursor: pointer;
        
     
@@ -302,22 +329,35 @@ footer {
     .mob2, .hamburger2 {
         display: block;
         background-color: #Fafafa; /* transparent or fafafa */
-        padding-bottom: 5vh;
+    
         
        
     }
 
     @supports ((position: -webkit-sticky) or (position: sticky)) {
-        .mob2 {
+        .container2, .mob2{
           position: -webkit-sticky;
           position: sticky;
           top: 0;
-          z-index: 1020;
+          z-index: 5000;
+          width: 100vw;
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
         }
-    }
+        
+          .container, .mob {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        
+         }
     .hamburger2{
         position: relative;
-        padding: 5vh;
+        padding: 3vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .mob2 ul {
     
@@ -331,13 +371,16 @@ footer {
     }
    
     .mob2 ul.nav-logo {
-        display: block;
-        height: 100vh;
+        display: flex;
+        flex-direction: column;
         position: inline-block;
-        margin-top: 5vh;
+        flex-grow: 1;
+        justify-content: space-evenly;
+}
+       
     }
     .mob2 ul li {
-        padding: 5vh;
+        padding: 3vh;
         cursor: pointer;
        
     
@@ -403,7 +446,7 @@ footer {
         font-size: 25pt;
         cursor: pointer;
         list-style: none;
-        float: left;
+        margin-right: auto;
     }
 
     .mob2 .logo {
@@ -414,9 +457,11 @@ footer {
         list-style: none;
         float: left;
     }
-    
+    .myClass {
+        height: 100vh;
+    }
+
     
   
 }
-
-
+  
